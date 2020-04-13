@@ -6,7 +6,7 @@ from factory import class_maker
 # The student's cohort
 # The collection of exercises that the student is currently working on
 
-StudentInit = class_maker("StudentInit", ["first_name", "last_name", "slack_handle", "cohort_instance", "exercises_instances"], ["asadsasd"])
+StudentInit = class_maker("StudentInit", ["first_name", "last_name", "slack_handle", "cohort_instance", "exercises_instances"])
 
 class Student(StudentInit):
     def this_method(self):
