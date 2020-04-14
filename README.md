@@ -4,7 +4,6 @@ Created: 04-13-20 | Modified: 04-14-20
 
 This assignment is an cumulative exercise
 ---
-
 ## Part 1 - Custom Types
 - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-1/student-exercises/main.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-one.md)

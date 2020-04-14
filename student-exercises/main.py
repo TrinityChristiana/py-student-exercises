@@ -1,3 +1,9 @@
+# **************************** Challenge: Student Exercises ****************************
+"""
+Author: Trinity Terry
+pyrun: python main.py
+"""
+
 from cohort import Cohort
 from exercise import Exercise
 from student import Student
@@ -110,6 +116,7 @@ for (hash, value) in student_dictonary.items():
     stu_dict = value.__dict__
     exercises = stu_dict["exercises_list"]
     # Using a set instead of a list to collect so there are no duplicates
+
     new_set = set()
     for exercise in exercises:
         new_set.add(exercise.__dict__["name"])
