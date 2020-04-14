@@ -105,9 +105,11 @@ for (inst_name, inst_value) in instructor_dictionary.items():
             inst_value.add_stu_to_exer(random.choice(exercise_picker), stu_value)
 
 
+# For Each Student, list all exercises thay were assigned
 for (hash, value) in student_dictonary.items():
     stu_dict = value.__dict__
     exercises = stu_dict["exercises_list"]
+    # Using a set instead of a list to collect so there are no duplicates
     new_set = set()
     for exercise in exercises:
         new_set.add(exercise.__dict__["name"])
