@@ -6,8 +6,8 @@ This assignment is an cumulative exercise
 ---
 
 ## Part 1 - Custom Types
-<!-- - [Code]()
-- [Directions]() -->
+- [Code]()
+- [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-one.md)
 
 <!-- ## Part 
 - [Code]()
