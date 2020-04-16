@@ -8,6 +8,11 @@ This assignment is an cumulative exercise
 - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-1/student-exercises/main.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-one.md)
 
+## Part 2 - Inheritance for Students and Instructors
+<!-- - [Code]() -->
+- [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-two.md)
+
+
 <!-- ## Part 
 - [Code]()
 - [Directions]()

@@ -4,10 +4,10 @@ Author: Trinity Terry
 pyrun: python main.py
 """
 
-from cohort import Cohort
-from exercise import Exercise
-from student import Student
-from instructor import Instructor
+from nss_items import Cohort
+from nss_items import Exercise
+from nss_items import Student
+from nss_items import Instructor
 import random
 
 def make_exercise_instances(tuple_it):
@@ -49,6 +49,7 @@ def make_student_instances(tuple_it):
     for [first_name, last_name, slack_handle, cohort_name] in tuple_it:
         new_dict[slack_handle] = Student(first_name, last_name, slack_handle, cohort_name)
         cohort_dictonary[cohort_name].add_student(new_dict[slack_handle])
+    return new_dict
 
 def make_instructor_instances(tuple_it):
 

@@ -5,6 +5,6 @@ Find any common properties and/or behaviors on students and instructors and crea
 ```py
 class NSSPerson():
     def __init__(self):
-    // What common properties will go here?
+    # What common properties will go here?
 
 ```

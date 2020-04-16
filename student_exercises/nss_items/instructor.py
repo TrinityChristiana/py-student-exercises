@@ -1,12 +1,9 @@
 import json
-
-class Instructor():
+from .nss_person import NSSPerson
+class Instructor(NSSPerson):
     def __init__(self, first_name, last_name,  slack_handle, cohort, specialty):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.slack_handle = slack_handle
+        super().__init__(first_name, last_name, slack_handle, cohort)
         self.specialty = specialty
-        self.cohort = cohort
 
     def add_stu_to_exer(self, exercise_instance, student_instance):
         student_instance.exercises_list.append(exercise_instance)
