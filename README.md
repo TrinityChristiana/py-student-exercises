@@ -1,6 +1,6 @@
 # Python Student Exercises
 
-Created: 04-13-20 | Modified: 04-14-20
+Created: 04-13-20 | Modified: 04-16-20
 
 This assignment is an cumulative exercise
 ---
@@ -9,7 +9,7 @@ This assignment is an cumulative exercise
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-one.md)
 
 ## Part 2 - Inheritance for Students and Instructors
-<!-- - [Code]() -->
+- [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-2/student_exercises/nss_items/nss_person.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-two.md)
 
 
