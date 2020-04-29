@@ -22,8 +22,12 @@ This assignment is an cumulative exercise
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/04-sql-with-py.md)
 
 ## Part 4 - Student Exercise Reports
-- [Code](https://github.com/TrinityTerry/py-student-exercises/blob/master/db_student_exercise/main.py)
+- [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-4/db_student_exercise/main.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-four.md)
+
+## Part 4 - Student Exercise Reports
+- [Code](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/db_student_exercise/main.py)
+- [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/directions/06-joining-data.md)
 
 ---
 _This is a lesson in [Bangazon LLC](https://github.com/nashville-software-school/bangazon-llc) Backend Coursework from [Nashville Software School](https://github.com/nashville-software-school)_

@@ -211,5 +211,3 @@ for exercise_name, students in exercises.items():
     for student in students:
         print(f'\t* {student}')
 ```
-
-![showing all exercises with related students](./images/students-per-exercise.gif)
