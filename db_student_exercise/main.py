@@ -21,3 +21,5 @@ report.all_students()
 
 # Display all instructors with cohort name.
 report.all_instructors()
+
+report.all_student_exercises()
