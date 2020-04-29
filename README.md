@@ -18,8 +18,8 @@ This assignment is an cumulative exercise
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-three.md)
 
 ## Chapter 4 - Using SQL with Python
-- [Code]()
-- [Directions]()
+- [Code](https://github.com/TrinityTerry/py-student-exercises/blob/ch4-sql-with-py/student_exercises/reports.py)
+- [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/04-sql-with-py.md)
 
 ---
 _This is a lesson in [Bangazon LLC](https://github.com/nashville-software-school/bangazon-llc) Backend Coursework from [Nashville Software School](https://github.com/nashville-software-school)_
