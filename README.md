@@ -29,5 +29,27 @@ This assignment is an cumulative exercise
 - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/db_student_exercise/main.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/directions/06-joining-data.md)
 
+## Part 5 - Student Workload
+- [Code](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/db_student_exercise/main.py)
+- [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/directions/part-five.md)
+
+- ### Practice: Student Workload
+    <!-- - [Code]() -->
+    <!-- - [Directions]() -->
+- ### Practice: Assigned Exercises
+    <!-- - [Code]() -->
+    <!-- - [Directions]() -->
+- ### Practice: Popular Exercises
+    <!-- - [Code]() -->
+    <!-- - [Directions]() -->
+- ### Advanced Challenge: Who is Working on What and Why?
+    <!-- - [Code]() -->
+    <!-- - [Directions]() -->
+- ### Advanced Challenge: Instructors and Students
+    <!-- - [Code]() -->
+    <!-- - [Directions]() -->
+
+    
+
 ---
 _This is a lesson in [Bangazon LLC](https://github.com/nashville-software-school/bangazon-llc) Backend Coursework from [Nashville Software School](https://github.com/nashville-software-school)_
