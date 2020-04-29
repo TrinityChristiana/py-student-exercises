@@ -25,7 +25,7 @@ This assignment is an cumulative exercise
 - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-4/db_student_exercise/main.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-four.md)
 
-## Part 4 - Student Exercise Reports
+## Chapter 6 - Joining Data
 - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/db_student_exercise/main.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/directions/06-joining-data.md)
 
