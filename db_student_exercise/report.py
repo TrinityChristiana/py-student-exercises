@@ -226,3 +226,33 @@ class StudentExerciseReports():
                 print(f"\n{instructor} has assigned:")
                 for exercise in exercises:
                     print(f"\t* {exercise}")
+    
+    def popular_exercises(self):
+        exercises = dict()
+        with sqlite3.connect(self.db_path) as conn:
+            db_cursor = conn.cursor()
+
+            db_cursor.execute("""
+            SELECT
+                s.first_name,
+                s.last_name,
+                e.name
+            FROM Student_Exercise se
+            JOIN Student s ON
+                s.id = se.student_id
+            JOIN Exercise e ON
+                e.id = se.excercise_id
+            """)
+
+            data = db_cursor.fetchall()
+            print("\n***** POPULAR EXERCISES *****")
+            for first, last, ex_name in data:
+                if ex_name not in exercises:
+                    exercises[ex_name] = [f"{first} {last}"]
+                elif f"{first} {last}" not in exercises[ex_name]:
+                    exercises[ex_name].append(f"{first} {last}")
+
+            for name, students in exercises.items():
+                print(f"\n{name} is being worked on by:")
+                for student in students:
+                    print(f"\t* {student}")

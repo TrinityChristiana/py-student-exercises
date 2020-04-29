@@ -31,4 +31,5 @@ report.student_with_exercises()
 report.assigned_exercises()
 
 # Practice: Popular Exercises
+report.popular_exercises()
 
