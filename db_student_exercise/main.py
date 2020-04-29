@@ -23,4 +23,12 @@ report.all_students()
 report.all_instructors()
 
 report.exercises_with_students()
+
+# Practice: Student Workload
 report.student_with_exercises()
+
+# Practice: Assigned Exercises
+report.assigned_exercises()
+
+# Practice: Popular Exercises
+

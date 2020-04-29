@@ -196,3 +196,33 @@ class StudentExerciseReports():
                 for exercise in exercises:
                     print(f"\t* {exercise}")
                 
+    def assigned_exercises(self):
+        instructors = dict()
+
+        with sqlite3.connect(self.db_path) as conn:
+
+            db_cursor = conn.cursor()
+            db_cursor.execute("""
+            SELECT
+                i.first_name,
+                i.last_name,
+                e.name
+            FROM Student_Exercise se
+            JOIN Instructor i ON i.id = se.instructor_id
+            JOIN Exercise e ON e.id = se.excercise_id
+            """)
+
+            instructor_assigned = db_cursor.fetchall()
+            
+            for first, last, exercise in instructor_assigned:
+                if f"{first} {last}" not in instructors:
+                    instructors[f"{first} {last}"] = [exercise]
+                else:
+                    if exercise not in instructors[f"{first} {last}"]:
+                        instructors[f"{first} {last}"].append(exercise)
+
+            print("\n***** ASSIGNED EXERCISES *****")
+            for instructor, exercises in instructors.items():
+                print(f"\n{instructor} has assigned:")
+                for exercise in exercises:
+                    print(f"\t* {exercise}")
