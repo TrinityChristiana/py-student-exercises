@@ -29,25 +29,27 @@ This assignment is an cumulative exercise
 - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/db_student_exercise/main.py)
 - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/directions/06-joining-data.md)
 
-## Part 5 - Student Workload
-- [Code](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/db_student_exercise/main.py)
-- [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/06-joining-data/directions/part-five.md)
+## Part 5 - Exercise
 
 - ### Practice: Student Workload
-    <!-- - [Code]() -->
-    <!-- - [Directions]() -->
+    - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/db_student_exercise/report.py#L164)
+    - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/directions/part-five.md#practice-student-workload)
+
 - ### Practice: Assigned Exercises
-    <!-- - [Code]() -->
-    <!-- - [Directions]() -->
+    - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/db_student_exercise/report.py#L201)
+    - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/directions/part-five.md#practice-assigned-exercises)
+
 - ### Practice: Popular Exercises
-    <!-- - [Code]() -->
-    <!-- - [Directions]() -->
+    - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/db_student_exercise/report.py#L232)
+    - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/directions/part-five.md#practice-popular-exercises)
+
 - ### Advanced Challenge: Who is Working on What and Why?
-    <!-- - [Code]() -->
-    <!-- - [Directions]() -->
+    - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/db_student_exercise/report.py#L263)
+    - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/directions/part-five.md#advanced-challenge-who-is-working-on-what-and-why)
+
 - ### Advanced Challenge: Instructors and Students
-    <!-- - [Code]() -->
-    <!-- - [Directions]() -->
+    - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/db_student_exercise/report.py#L302)
+    - [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/part-5/directions/part-five.md#advanced-challenge-instructors-and-students)
 
     
 
