@@ -33,3 +33,7 @@ report.assigned_exercises()
 # Practice: Popular Exercises
 report.popular_exercises()
 
+# Advanced Challenge: Who is Working on What and Why?
+report.exercise_w_student_and_instructor()
+
+

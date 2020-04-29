@@ -1,5 +1,7 @@
 import sqlite3
 from items import Student, Cohort, Exercise, Instructor
+
+
 class StudentExerciseReports():
 
     """Methods for reports on the Student Exercises database"""
@@ -8,13 +10,12 @@ class StudentExerciseReports():
         self.db_path = "studentexercises.db"
 
     def all_students(self):
-
         """Retrieve all students with the cohort name"""
 
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = lambda cursor, row: Student(
                 row[1], row[2], row[3], row[5]
-            )            
+            )
 
             db_cursor = conn.cursor()
 
@@ -96,11 +97,11 @@ class StudentExerciseReports():
             """)
 
             all_instructors = db_cursor.fetchall()
-            
+
             print("\n***** ALL INSTRUCTORS *****")
             [print(i) for i in all_instructors]
 
-    def exercise(self, language = None):
+    def exercise(self, language=None):
         with sqlite3.connect(self.db_path) as conn:
             conn.row_factory = lambda c, r: Exercise(
                 r[1], r[2]
@@ -119,7 +120,8 @@ class StudentExerciseReports():
             """)
 
             exercises = db_cursor.fetchall()
-            print(f"\n***** {language.upper() if language else 'ALL' } EXERCISES *****")
+            print(
+                f"\n***** {language.upper() if language else 'ALL' } EXERCISES *****")
             [print(e) for e in exercises]
 
     def exercises_with_students(self):
@@ -152,7 +154,7 @@ class StudentExerciseReports():
                     exercises[e_name] = [s_name]
                 else:
                     exercises[e_name].append(s_name)
-                    
+
             print("\n***** ALL EXERCISES WITH STUDENTS *****")
             for e_name, students in exercises.items():
                 print(e_name)
@@ -189,13 +191,13 @@ class StudentExerciseReports():
                     students[s_name] = [e_name]
                 else:
                     students[s_name].append(e_name)
-                    
+
             print("\n***** ALL STUDENTS WITH EXERCISES *****")
             for student, exercises in students.items():
                 print(f"\n{student} is working on:")
                 for exercise in exercises:
                     print(f"\t* {exercise}")
-                
+
     def assigned_exercises(self):
         instructors = dict()
 
@@ -213,7 +215,7 @@ class StudentExerciseReports():
             """)
 
             instructor_assigned = db_cursor.fetchall()
-            
+
             for first, last, exercise in instructor_assigned:
                 if f"{first} {last}" not in instructors:
                     instructors[f"{first} {last}"] = [exercise]
@@ -226,8 +228,9 @@ class StudentExerciseReports():
                 print(f"\n{instructor} has assigned:")
                 for exercise in exercises:
                     print(f"\t* {exercise}")
-    
+
     def popular_exercises(self):
+
         exercises = dict()
         with sqlite3.connect(self.db_path) as conn:
             db_cursor = conn.cursor()
@@ -256,3 +259,42 @@ class StudentExerciseReports():
                 print(f"\n{name} is being worked on by:")
                 for student in students:
                     print(f"\t* {student}")
+
+    def exercise_w_student_and_instructor(self):
+        exercises = dict()
+
+        with sqlite3.connect(self.db_path) as conn:
+            db_cursor = conn.cursor()
+
+            db_cursor.execute("""
+            SELECT 
+                e.name,
+                i.first_name,
+                i.last_name,
+                s.first_name,
+                s.last_name
+            FROM Student_Exercise es
+            JOIN Exercise e ON
+                e.id = es.excercise_id
+            JOIN Instructor i ON
+                i.id = es.instructor_id
+            JOIN Student s ON
+                s.id = es.student_id
+            """)
+
+            data = db_cursor.fetchall()
+
+            print("\n***** Who is Working on What and Why? *****".upper())
+            for exercise, i_first, i_last, s_first, s_last in data:
+                if exercise not in exercises:
+                    exercises[exercise] = [{
+                        "student": f"{s_first} {s_last}", "instructor": f"{i_first} {i_last}"}]
+                else:
+                    exercises[exercise].append({
+                        "student": f"{s_first} {s_last}", "instructor": f"{i_first} {i_last}"})
+
+            for exercise, info in exercises.items():
+                print(f"\n{exercise}:")
+                for item in info:
+                    print(f"  * {item['instructor']} assigned this to {item['student']}")
+
