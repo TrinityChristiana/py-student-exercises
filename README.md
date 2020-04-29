@@ -23,7 +23,7 @@ This assignment is an cumulative exercise
 
 ## Part 4 - Student Exercise Reports
 - [Code](https://github.com/TrinityTerry/py-student-exercises/blob/master/db_student_exercise/main.py)
-- [Directions]()
+- [Directions](https://github.com/TrinityTerry/py-student-exercises/blob/master/directions/part-four.md)
 
 ---
 _This is a lesson in [Bangazon LLC](https://github.com/nashville-software-school/bangazon-llc) Backend Coursework from [Nashville Software School](https://github.com/nashville-software-school)_
