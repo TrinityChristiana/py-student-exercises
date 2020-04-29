@@ -121,3 +121,40 @@ class StudentExerciseReports():
             exercises = db_cursor.fetchall()
             print(f"\n***** {language.upper() if language else 'ALL' } EXERCISES *****")
             [print(e) for e in exercises]
+
+    def all_student_exercises(self):
+        exercises = dict()
+
+        with sqlite3.connect(self.db_path) as conn:
+            db_cursor = conn.cursor()
+
+            db_cursor.execute("""
+            SELECT
+                e.id 'Excercise Id',
+                e.name 'Exercise',
+                s.id 'Student Id',
+                s.first_name 'First Name',
+                s.last_name 'Last Name'
+            FROM Exercise e
+            JOIN Student_Exercise se ON se.excercise_id = e.id
+            JOIN Student s ON s.id = se.student_id
+            """)
+
+            dataset = db_cursor.fetchall()
+
+            for r in dataset:
+                e_id = r[0]
+                e_name = r[1]
+                s_id = r[2]
+                s_name = f"{r[3]} {r[4]}"
+
+                if e_name not in exercises:
+                    exercises[e_name] = [s_name]
+                else:
+                    exercises[e_name].append(s_name)
+                    
+            print("\n***** ALL STUDENT EXERCISES *****")
+            for e_name, students in exercises.items():
+                print(e_name)
+                for student in students:
+                    print(f"\t* {student}")
