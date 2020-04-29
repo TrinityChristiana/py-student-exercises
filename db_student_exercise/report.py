@@ -267,7 +267,7 @@ class StudentExerciseReports():
             db_cursor = conn.cursor()
 
             db_cursor.execute("""
-            SELECT 
+            SELECT
                 e.name,
                 i.first_name,
                 i.last_name,
@@ -296,5 +296,58 @@ class StudentExerciseReports():
             for exercise, info in exercises.items():
                 print(f"\n{exercise}:")
                 for item in info:
-                    print(f"  * {item['instructor']} assigned this to {item['student']}")
+                    print(
+                        f"  * {item['instructor']} assigned this to {item['student']}")
 
+    def instructors_students(self):
+        cohorts = dict()
+
+        with sqlite3.connect(self.db_path) as conn:
+            db_cursor = conn.cursor()
+
+            db_cursor.execute("""
+            SELECT
+                c.name,
+                s.first_name,
+                s.last_name
+            FROM Cohort c
+            LEFT JOIN Student s ON
+                s.cohort_id = c.id
+            """)
+
+            student_data = db_cursor.fetchall()
+
+
+            for c_name, first, last in student_data:
+                if c_name not in cohorts:
+                    cohorts[c_name] = {"students": [f"{first} {last}"], "instructors": []}
+                else:
+                    cohorts[c_name]["students"].append(f"{first} {last}")
+
+            db_cursor.execute("""
+            SELECT 
+                c.name,
+                i.first_name,
+                i.last_name
+            FROM Cohort c
+            LEFT JOIN Instructor i ON
+                i.cohort_id = c.id
+            """)
+
+            instructor_data = db_cursor.fetchall()
+            for c_name, first, last in instructor_data:
+                if c_name not in cohorts:
+                    cohorts[c_name] = {"instructors": [f"{first} {last}"], "students": []}
+                else:
+                    cohorts[c_name]["instructors"].append(f"{first} {last}")
+
+            print("\n***** Instructors and Students *****")
+            
+            for cohort, people in cohorts.items():
+                print(f"\n{cohort}")
+                print("  Students:")
+                for student in people["students"]:
+                    print(f"  * {student} is in {cohort}")
+                print("  Instructors:")
+                for instructor in people["instructors"]:
+                    print(f"  * {instructor} is in {cohort}")
