@@ -42,18 +42,9 @@ class StudentExerciseReports():
             """)
 
             all_students = db_cursor.fetchall()
-            
+
             [print(s) for s in all_students]
 
-    
-    def create_instructor(self, cursor, row):
-        pass
-
-    def create_cohort(self, cursor, row):
-        pass
-
-    def create_exercise(self, cursor, row):
-        pass
 
 reports = StudentExerciseReports()
 reports.all_students()
