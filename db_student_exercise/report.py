@@ -2,6 +2,7 @@ import sqlite3
 from items import Student, Cohort, Exercise, Instructor
 
 
+
 class StudentExerciseReports():
 
     """Methods for reports on the Student Exercises database"""
@@ -351,3 +352,7 @@ class StudentExerciseReports():
                 print("  Instructors:")
                 for instructor in people["instructors"]:
                     print(f"  * {instructor} is in {cohort}")
+
+        
+
+
