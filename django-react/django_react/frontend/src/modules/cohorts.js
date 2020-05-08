@@ -7,5 +7,8 @@ const get_all_cohorts = () => {
 const get_cohort = (cohort_id) => {
   return fetch(`${baseurl}cohort/${cohort_id}`).then((resp) => resp.json());
 };
+const get_cohort_link = (link) => {
+  return fetch(link).then((resp) => resp.json());
+};
 
-export { get_all_cohorts, get_cohort };
+export { get_all_cohorts, get_cohort, get_cohort_link };
